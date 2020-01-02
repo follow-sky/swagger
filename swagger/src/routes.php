@@ -7,11 +7,11 @@ Route::group([
 
 	Route::get('/', [
 		'as' => 'swagger_index',
-		'uses' => 'SwaggerController@getIndex'
+		'uses' => 'FollowSky\Swagger\SwaggerController@getIndex'
 	]);
 
 	Route::get('docs/{page?}', [
 		'as' => 'swagger_docs',
-		'uses' => 'SwaggerController@getDocs'
+		'uses' => 'FollowSky\Swagger\SwaggerController@getDocs'
 	]);
 });

@@ -1,10 +1,17 @@
 {
-    "name": "followSky/swagger",
-    "description": "laravel6 swagger",
-    "type": "project",
-    "license": "MIT",
-    "authors" : [{
-			"name" : "followSky",
+	"name" : "follow-sky/swagger",
+	"description" : "Swagger for Laravel 6",
+	"keywords" : [
+		"L6",
+		"Laravel 6",
+		"Laravel",
+		"Swagger",
+		"Swagger-PHP",
+		"Swagger-UI"
+	],
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "follow-sky",
 			"email" : "admin@admin.com"
 		}
 	],
@@ -21,15 +28,18 @@
 		"phpunit/phpunit" : "~6.0"
 	},
 	"extra" : {
-		"laravel": {
-			"providers": [
-				"Swagger6\\Laravel\\SwaggerServiceProvider"
+		"laravel" : {
+			"providers" : [
+				"FollowSky\\Swagger\\SwaggerServiceProvider"
 			]
 		}
 	},
-	"autoload": {
-		"psr-4": {
-			"Swagger\\Laravel\\": "src/"
+	"autoload" : {
+		"classmap" : [
+			"src/controllers"
+		],
+		"psr-0" : {
+			"FollowSky\\Swagger\\" : "src/"
 		}
 	},
 	"autoload-dev" : {
